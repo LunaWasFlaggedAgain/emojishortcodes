@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "emojishortcodes",
+  "version": "${version}",
+  "name": "emojishortcodes",
+  "description": "Converts shortcodes (\":+1:\") to unicode emojis",
+  "authors": [
+    "Luna"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/emojishortcodes/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.github.lunawasflaggedagain.emojishortcodes.EmojiShortcodes"
+    ]
+  },
+  "mixins": [
+    "emojishortcodes.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9"
+  }
+}
