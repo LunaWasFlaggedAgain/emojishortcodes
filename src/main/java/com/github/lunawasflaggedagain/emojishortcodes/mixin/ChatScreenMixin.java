@@ -14,7 +14,7 @@ public class ChatScreenMixin {
     private static final Pattern SHORTCODE_PATTERN = Pattern.compile("(?:^|[^\\\\])(:[^:\\s]+:)");
 
 
-    @ModifyArg(method = "sendMessage(Ljava/lang/String;Z)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;sendChatMessage(Ljava/lang/String;Lnet/minecraft/text/Text;)V"), index = 0)
+    @ModifyArg(method = "sendMessage(Ljava/lang/String;Z)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendChatMessage(Ljava/lang/String;)V"), index = 0)
     private String sendMessage(String message) {
         final Matcher m = SHORTCODE_PATTERN.matcher(message);
 
